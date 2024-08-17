@@ -1,13 +1,12 @@
 import mongoose from 'mongoose';
 import config from '~/config/config';
 import app from './app';
+import express from 'express';
 import initialData from './config/initialData';
 import logger from './config/logger';
-
+import swaggerDocs from './utils/swagger';
 let server;
-
 mongoose.Promise = global.Promise;
-
 const db = mongoose.connection;
 
 db.on('connecting', () => {
@@ -39,12 +38,14 @@ const connect = async () => {
 		logger.info('🚀 Initial MongoDB!');
 		server = app.listen(config.PORT, config.HOST, () => {
 			logger.info(`🚀 Host: http://${config.HOST}:${config.PORT}`);
+			// swaggerDocs(app,config.PORT)
 			logger.info('██████╗░░░██╗██╗███████╗');
 			logger.info('██╔══██╗░██╔╝██║╚════██║');
 			logger.info('██║░░██║██╔╝░██║░░███╔═╝');
 			logger.info('██║░░██║███████║██╔══╝░░');
 			logger.info('██████╔╝╚════██║███████╗');
 			logger.info('╚═════╝░░░░░░╚═╝╚══════╝');
+		
 		});
 	} catch (err) {
 		logger.error(`MongoDB connection error: ${err}`);
