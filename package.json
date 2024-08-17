@@ -31,6 +31,9 @@
 		"passport-jwt": "^4.0.0",
 		"pm2": "^5.1.1",
 		"sharp": "^0.29.1",
+		"swagger-jsdoc": "^6.2.8",
+		"swagger-ui": "^5.17.14",
+		"swagger-ui-express": "^5.0.1",
 		"uuid": "^8.3.2",
 		"validator": "^13.6.0",
 		"winston": "^3.3.3"
