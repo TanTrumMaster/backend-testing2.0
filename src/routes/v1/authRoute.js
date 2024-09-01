@@ -168,7 +168,7 @@ const router = Router();
  *                   type: string
  *                   example: User not found
  */
-router.get('/current', authenticate(), catchAsync(authController.current));
+// router.get('/current', authenticate(), catchAsync(authController.current));
 
 /**
  * @openapi
@@ -207,7 +207,7 @@ router.get('/current', authenticate(), catchAsync(authController.current));
  *                   type: string
  *                   example: User not found
  */
-// router.get('/me', authenticate(), catchAsync(authController.getMe));
+router.get('/me', authenticate(), catchAsync(authController.getMe));
 
 /**
  * @openapi
