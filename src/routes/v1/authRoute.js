@@ -670,6 +670,6 @@ router.get('/me', authenticate(), catchAsync(authController.getMe));
  *                   type: string
  *                   example: Internal server error
  */
-// router.post('/reset-password', validate(authValidation.resetPassword), catchAsync(authController.resetPassword));
+router.post('/reset-password', validate(authValidation.resetPassword), catchAsync(authController.resetPassword));
 
 export default router;
