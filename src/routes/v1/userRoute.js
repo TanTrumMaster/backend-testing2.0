@@ -7,15 +7,15 @@ import userController from '~/controllers/userController';
 
 const router = Router();
 
-router.get('/', authenticate('user:read'), validate(userValidation.getUsers), catchAsync(userController.getUsers));
-router.post('/', authenticate('user:create'), validate(userValidation.createUser), catchAsync(userController.createUser));
-router.get('/:userId', authenticate('user:read'), validate(userValidation.getUser), catchAsync(userController.getUser));
-router.put('/:userkadsadasd', authenticate('user:update'), validate(userValidation.updateUser), catchAsync(userController.updateUser));
-router.delete(
-	'/:userId',
-	authenticate('user:delete'),
-	validate(userValidation.deleteUser),
-	catchAsync(userController.deleteUser)
-);
+// router.get('/', authenticate('user:read'), validate(userValidation.getUsers), catchAsync(userController.getUsers));
+// router.post('/', authenticate('user:create'), validate(userValidation.createUser), catchAsync(userController.createUser));
+// router.get('/:userId', authenticate('user:read'), validate(userValidation.getUser), catchAsync(userController.getUser));
+// router.put('/:userkadsadasd', authenticate('user:update'), validate(userValidation.updateUser), catchAsync(userController.updateUser));
+// router.delete(
+// 	'/:userId',
+// 	authenticate('user:delete'),
+// 	validate(userValidation.deleteUser),
+// 	catchAsync(userController.deleteUser)
+// );
 
 export default router;
