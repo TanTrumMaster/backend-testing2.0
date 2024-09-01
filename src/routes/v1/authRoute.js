@@ -62,7 +62,7 @@ const router = Router();
  *                   type: string
  *                   example: Invalid input data
  */
-// router.post('/signup', validate(authValidation.signup), catchAsync(authController.signup));
+router.post('/signup', validate(authValidation.signup), catchAsync(authController.signup));
 
 /**
  * @openapi
