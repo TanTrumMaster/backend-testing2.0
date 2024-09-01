@@ -119,7 +119,7 @@ router.post('/signup', validate(authValidation.signup), catchAsync(authControlle
  *                   type: string
  *                   example: Incorrect user name or password
  */
-router.post('/signin', validate(authValidation.signin), catchAsync(authController.signin));
+// router.post('/signin', validate(authValidation.signin), catchAsync(authController.signin));
 
 /**
  * @openapi
@@ -168,7 +168,7 @@ router.post('/signin', validate(authValidation.signin), catchAsync(authControlle
  *                   type: string
  *                   example: User not found
  */
-router.get('/current', authenticate(), catchAsync(authController.current));
+// router.get('/current', authenticate(), catchAsync(authController.current));
 
 /**
  * @openapi
@@ -207,7 +207,7 @@ router.get('/current', authenticate(), catchAsync(authController.current));
  *                   type: string
  *                   example: User not found
  */
-router.get('/me', authenticate(), catchAsync(authController.getMe));
+// router.get('/me', authenticate(), catchAsync(authController.getMe));
 
 /**
  * @openapi
@@ -265,7 +265,7 @@ router.get('/me', authenticate(), catchAsync(authController.getMe));
  *                   type: string
  *                   example: Invalid input data
  */
-router.put('/me', authenticate(), validate(authValidation.updateMe), catchAsync(authController.updateMe));
+// router.put('/me', authenticate(), validate(authValidation.updateMe), catchAsync(authController.updateMe));
 
 /**
  * @openapi
@@ -341,7 +341,7 @@ router.put('/me', authenticate(), validate(authValidation.updateMe), catchAsync(
  *                   type: string
  *                   example: Internal server error
  */
-router.post('/signout', validate(authValidation.signout), catchAsync(authController.signout));
+// router.post('/signout', validate(authValidation.signout), catchAsync(authController.signout));
 
 /**
  * @openapi
@@ -418,7 +418,7 @@ router.post('/signout', validate(authValidation.signout), catchAsync(authControl
  *                   type: string
  *                   example: Internal server error
  */
-router.post('/refresh-tokens', validate(authValidation.refreshTokens), catchAsync(authController.refreshTokens));
+// router.post('/refresh-tokens', validate(authValidation.refreshTokens), catchAsync(authController.refreshTokens));
 
 /**
  * @openapi
@@ -480,7 +480,7 @@ router.post('/refresh-tokens', validate(authValidation.refreshTokens), catchAsyn
  *                   type: string
  *                   example: Internal server error
  */
-router.post('/send-verification-email', authenticate(), catchAsync(authController.sendVerificationEmail));
+// router.post('/send-verification-email', authenticate(), catchAsync(authController.sendVerificationEmail));
 
 /**
  * @openapi
@@ -542,7 +542,7 @@ router.post('/send-verification-email', authenticate(), catchAsync(authControlle
  *                   type: string
  *                   example: Internal server error
  */
-router.post('/verify-email', validate(authValidation.verifyEmail), catchAsync(authController.verifyEmail));
+// router.post('/verify-email', validate(authValidation.verifyEmail), catchAsync(authController.verifyEmail));
 
 /**
  * @openapi
@@ -604,7 +604,7 @@ router.post('/verify-email', validate(authValidation.verifyEmail), catchAsync(au
  *                   type: string
  *                   example: Internal server error
  */
-router.post('/forgot-password', validate(authValidation.forgotPassword), catchAsync(authController.forgotPassword));
+// router.post('/forgot-password', validate(authValidation.forgotPassword), catchAsync(authController.forgotPassword));
 
 /**
  * @openapi
@@ -670,6 +670,6 @@ router.post('/forgot-password', validate(authValidation.forgotPassword), catchAs
  *                   type: string
  *                   example: Internal server error
  */
-router.post('/reset-password', validate(authValidation.resetPassword), catchAsync(authController.resetPassword));
+// router.post('/reset-password', validate(authValidation.resetPassword), catchAsync(authController.resetPassword));
 
 export default router;
