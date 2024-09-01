@@ -119,7 +119,7 @@ const router = Router();
  *                   type: string
  *                   example: Incorrect user name or password
  */
-router.post('/signin', validate(authValidation.signin), catchAsync(authController.signin));
+// router.post('/signin', validate(authValidation.signin), catchAsync(authController.signin));
 
 /**
  * @openapi
@@ -168,7 +168,7 @@ router.post('/signin', validate(authValidation.signin), catchAsync(authControlle
  *                   type: string
  *                   example: User not found
  */
-// router.get('/current', authenticate(), catchAsync(authController.current));
+router.get('/current', authenticate(), catchAsync(authController.current));
 
 /**
  * @openapi
